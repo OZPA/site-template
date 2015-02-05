@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@import "../vars";
+
+//responsive
+.grid__cont{
+  @include clearfix;
+  @include center-layout($margin);
+  @include mq-tab-smp{
+  width: 100%;
+  margin-top: $margin;
+}
+}
+.grid__row{
+  @include mq-pc{
+  @include clearfix;
+  width:$max-width;
+  max-width: 100%;
+}
+}
+
+.span--1{width: 8.33%;}
+.span--2{width: 16.66%;}
+.span--3{width: 25%;}
+.span--4{width: 33.33%;}
+.span--5{width: 41.66%;}
+.span--6{width: 50%;}
+.span--7{width: 58.33%;}
+.span--8{width: 66.66%;}
+.span--9{width: 75%;}
+.span--10{width: 83.33%;}
+.span--11{width: 91.66;}
+.span--12{width: 100%;}
+
+@for $value from 1 through 12{
+  .span--#{$value}{
+        img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+    @include mq-pc{
+    display: block;
+    float: left;
+    &.span--op{
+      float: right !important;
+    }
+  }
+  @include mq-tab-smp{
+    width: 100%;
+    margin-bottom: $margin;
+    float: none;
+    img{
+      margin: auto;
+      display: block;
+    }
+  }
+  @include mq-tablet{
+    width: 100%;
+    margin-bottom: $margin;
+    float: none;
+  }
+  @include mq-smp{
+    width: 100%;
+    margin-bottom: $margin;
+    float: none;
+  }
+}
+}
+.span--6--tab{
+  @include mq-tablet{
+  width: 50% !important;
+  float: left !important;
+}
+}
+.span--4--tab{
+  @include mq-tablet{
+  width: 33.3% !important;
+  float: left !important;
+}
+}
+.span--3--tab{
+  @include mq-tablet{
+  width: 25% !important;
+  float: left !important;
+}
+}
+
+
+.span--6--smp{
+  @include mq-tablet{
+  width: 50% !important;
+  float: left !important;
+}
+}
+.span--4--smp{
+  @include mq-tablet{
+  width: 33.3% !important;
+  float: left !important;
+}
+}
+.span--3--smp{
+  @include mq-tablet{
+  width: 25% !important;
+  float: left !important;
+}
+}
+
+.dn--pc{
+  @include mq-pc{
+  display: none;
+}
+}
+.dn--smp{
+  @include mq-smp{
+  display: none;
+}
+}
+.dn--tablet{
+  @include mq-tablet{
+  display: none;
+}
+}
+.dn--tab--smp{
+  @include mq-tab-smp{
+  display: none;
+}
+}

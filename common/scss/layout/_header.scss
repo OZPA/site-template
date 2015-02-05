@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import "../vars";
+
+//header
+.header-cont{
+  @include mq-pc{
+    @include center-layout;
+  }
+}

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import "../vars";
+
+//footer
+.footer-cont{
+  @include mq-pc{
+    @include center-layout;
+  }
+}
+

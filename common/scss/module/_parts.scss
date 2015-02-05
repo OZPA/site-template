@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@import "../vars";
+
+//bread crumbs
+.bread-crumbs{
+  @extend %clearfix;
+  margin-bottom: 20px;
+  ul{
+  @extend .clearfix;
+    li{
+      @include fz(11);
+      list-style: none;
+      float: left;
+      margin-right: 10px;
+      a{
+        // if arrow img
+        // background: url(../img/ar-bread.png) no-repeat right 4px;
+        // if arrow font
+        padding-right: 17px;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+//pageTop
+.pageTop{
+  
+}
