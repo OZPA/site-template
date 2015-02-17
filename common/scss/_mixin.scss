@@ -33,6 +33,7 @@
   -webkit-box-sizing: $box-sizing;
   -o-box-sizing: $box-sizing;
   -ms-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
 }
 
 //transition
@@ -75,8 +76,8 @@
 @mixin center-layout($margin-top:0,$margin-bottom:0){
   @include mq-pc{
   margin: $margin-top auto $margin-bottom auto;
-  width:$max-width ;
-  max-width: 100%;
+  width: 100%;
+  max-width: $max-width ;
   }
 }
 
@@ -149,7 +150,7 @@
  background: -o-linear-gradient(top,  $start-color 0%,$end-color 100%);
  background: -ms-linear-gradient(top,  $start-color 0%,$end-color 100%);
  background: linear-gradient(to bottom,  $start-color 0%,$end-color 100%);
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+ -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
  }
  @else if $orientation == horizontal
  {
@@ -160,7 +161,7 @@
  background: -o-linear-gradient(left,  $start-color 0%,$end-color 100%);
  background: -ms-linear-gradient(left,  $start-color 0%,$end-color 100%);
  background: linear-gradient(to right,  $start-color 0%,$end-color 100%);
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+ -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
  }
  @else
  {
@@ -171,7 +172,7 @@
  background: -o-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
  background: -ms-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
  background: radial-gradient(ellipse at center,  $start-color 0%,$end-color 100%);
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+ -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
  }
  }
 
